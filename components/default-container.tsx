@@ -5,18 +5,18 @@ interface DefaultContainerProps {
 	className?: string;
 }
 
-export function DefaultContainer({
+export const DefaultContainer = ({
 	children,
 	className
-}: DefaultContainerProps) {
+}: DefaultContainerProps) => {
 	return (
 		<div
 			className={cn(
-				"flex items-center justify-between w-full max-w-7xl px-4 mx-auto",
+				"flex items-center justify-between w-full max-w-[1440px] px-4 mx-auto",
 				className
 			)}
 		>
 			{children}
 		</div>
 	);
-}
+};
