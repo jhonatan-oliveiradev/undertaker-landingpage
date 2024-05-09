@@ -6,7 +6,10 @@ const ShowcaseSection = () => {
 	return (
 		<div className=" bg-zinc-100 w-full">
 			<DefaultContainer>
-				<section className="h-[1335px] md:h-[850px] flex flex-col items-center justify-center w-full mx-auto">
+				<section
+					id="#showcase"
+					className="h-[1335px] md:h-[850px] flex flex-col items-center justify-center w-full mx-auto"
+				>
 					<div className="flex flex-col items-center justify-center mb-8">
 						<h2 className="text-2xl mt-64 md:-mt-0 md:text-3xl font-semibold text-zinc-900 mb-5">
 							Showcase

@@ -9,6 +9,7 @@ const ContactSection = () => {
 	return (
 		<DefaultContainer>
 			<section
+				id="#contact"
 				className="py-20 flex justify-between"
 				style={{ height: "100%" }}
 			>
