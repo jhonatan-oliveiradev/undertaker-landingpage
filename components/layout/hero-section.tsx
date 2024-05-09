@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { DefaultContainer } from "../default-container";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
@@ -7,7 +10,13 @@ const HeroSection = () => {
 	return (
 		<DefaultContainer>
 			<section className="h-[335px] md:h-[850px] flex items-center justify-between w-full">
-				<div className="flex flex-col justify-center items-center h-full w-[42rem]">
+				<motion.div
+					initial={{ opacity: 0, x: -100 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					exit={{ opacity: 0, x: -100 }}
+					transition={{ duration: 0.5 }}
+					className="flex flex-col justify-center items-center h-full w-[42rem]"
+				>
 					<h1 className="text-2xl md:text-5xl font-semibold text-left text-zinc-900 mb-6 pr-12 leading-relaxed">
 						We build your dream house with our passion.
 					</h1>
@@ -27,7 +36,13 @@ const HeroSection = () => {
 							Get started
 						</Link>
 					</div>
-					<div className="flex flex-col gap-8">
+					<motion.div
+						initial={{ opacity: 0, y: 200, scale: 0.5 }}
+						whileInView={{ opacity: 1, y: 0, scale: 1 }}
+						exit={{ opacity: 0, y: 200, scale: 0.5 }}
+						transition={{ duration: 0.5 }}
+						className="flex flex-col gap-8 origin-center"
+					>
 						<div className="flex items-center justify-between py-12 gap-16">
 							<Card className="px-6 rounded-3xl bg-[#C6D9E1] border-none">
 								<CardHeader>
@@ -72,9 +87,15 @@ const HeroSection = () => {
 								/>
 							</CardContent>
 						</Card>
-					</div>
-				</div>
-				<div className="hidden lg:flex items-center justify-center">
+					</motion.div>
+				</motion.div>
+				<motion.div
+					initial={{ opacity: 0, x: 100 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					exit={{ opacity: 0, x: 100 }}
+					transition={{ duration: 0.5 }}
+					className="hidden lg:flex items-center justify-center"
+				>
 					<div className="absolute flex items-center justify-center">
 						{" "}
 						<Image
@@ -86,7 +107,7 @@ const HeroSection = () => {
 						/>
 					</div>
 					<Image src="/hero.png" alt="Hero image" width={660} height={850} />
-				</div>
+				</motion.div>
 			</section>
 		</DefaultContainer>
 	);

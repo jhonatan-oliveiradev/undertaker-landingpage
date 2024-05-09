@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
+import { motion } from "framer-motion";
 import { DefaultContainer } from "../default-container";
 import { HeartIcon, SearchIcon, UserIcon } from "lucide-react";
 
@@ -15,7 +18,13 @@ const ContactSection = () => {
 			>
 				{" "}
 				<div className="w-[720px]">
-					<div className="max-w-[330px]">
+					<motion.div
+						initial={{ opacity: 0, y: 200, scale: 0.5 }}
+						whileInView={{ opacity: 1, y: 0, scale: 1 }}
+						exit={{ opacity: 0, y: 200, scale: 0.5 }}
+						transition={{ duration: 0.5 }}
+						className="max-w-[330px]"
+					>
 						<h2 className="text-2xl md:text-3xl font-semibold text-zinc-900 mb-5">
 							Contact
 						</h2>
@@ -23,15 +32,31 @@ const ContactSection = () => {
 							Interested in your services? Fill the form and we’ll contact you
 							as soon as possible.
 						</p>
-					</div>
-					<form action="" className="max-w-[478px]">
-						<Input type="text" placeholder="Name" className="mt-5" />
-						<Input type="email" placeholder="Email" className="mt-5" />
-						<Textarea placeholder="Type your message here." className="mt-5" />
-						<Button className="w-full mt-5">Send Message</Button>
-					</form>
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 200, scale: 0.5 }}
+						whileInView={{ opacity: 1, y: 0, scale: 1 }}
+						exit={{ opacity: 0, y: 200, scale: 0.5 }}
+						transition={{ duration: 0.5 }}
+					>
+						<form action="" className="max-w-[478px]">
+							<Input type="text" placeholder="Name" className="mt-5" />
+							<Input type="email" placeholder="Email" className="mt-5" />
+							<Textarea
+								placeholder="Type your message here."
+								className="mt-5"
+							/>
+							<Button className="w-full mt-5">Send Message</Button>
+						</form>
+					</motion.div>
 				</div>
-				<div className="flex flex-col justify-end h-full gap-8">
+				<motion.div
+					initial={{ opacity: 0, x: 100, scale: 0.5 }}
+					whileInView={{ opacity: 1, x: 0, scale: 1 }}
+					exit={{ opacity: 0, x: 100, scale: 0.5 }}
+					transition={{ duration: 0.3, delay: 0.3 }}
+					className="flex flex-col justify-end h-full gap-8"
+				>
 					{" "}
 					<Link href="/">
 						<span className="text-3xl font-semibold">Undertaker</span>
@@ -56,7 +81,7 @@ const ContactSection = () => {
 							</Link>
 						</li>
 					</ul>
-				</div>
+				</motion.div>
 			</section>
 		</DefaultContainer>
 	);

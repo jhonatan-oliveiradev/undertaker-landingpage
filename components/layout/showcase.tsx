@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 import { DefaultContainer } from "../default-container";
 import ShowcaseCarousel from "../showcase-carousel";
 
@@ -10,7 +12,13 @@ const ShowcaseSection = () => {
 					id="#showcase"
 					className="h-[1335px] md:h-[850px] flex flex-col items-center justify-center w-full mx-auto"
 				>
-					<div className="flex flex-col items-center justify-center mb-8">
+					<motion.div
+						initial={{ opacity: 0, y: 100 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 100 }}
+						transition={{ duration: 0.5 }}
+						className="flex flex-col items-center justify-center mb-8"
+					>
 						<h2 className="text-2xl mt-64 md:-mt-0 md:text-3xl font-semibold text-zinc-900 mb-5">
 							Showcase
 						</h2>
@@ -19,7 +27,7 @@ const ShowcaseSection = () => {
 							innovative design and meticulous craftsmanship that transforms
 							visionary ideas into tangible realities.
 						</p>
-					</div>
+					</motion.div>
 					<ShowcaseCarousel />
 				</section>
 			</DefaultContainer>

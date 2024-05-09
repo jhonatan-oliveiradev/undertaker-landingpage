@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import {
 	Carousel,
@@ -42,7 +43,13 @@ const ShowcaseCarousel = () => {
 				<CarouselContent>
 					{carouselItems.map((item, index) => (
 						<CarouselItem key={index} className="basis-1/3">
-							<div className="p-0">
+							<motion.div
+								initial={{ opacity: 0, y: 100, scale: 0.5 }}
+								whileInView={{ opacity: 1, y: 0, scale: 1 }}
+								exit={{ opacity: 0, y: 100, scale: 0.5 }}
+								transition={{ duration: 0.3, delay: 0.3 }}
+								className="p-0"
+							>
 								<Card>
 									<CardContent className="flex aspect-auto items-center justify-center p-0">
 										<Image
@@ -55,7 +62,7 @@ const ShowcaseCarousel = () => {
 										/>
 									</CardContent>
 								</Card>
-							</div>
+							</motion.div>
 						</CarouselItem>
 					))}
 				</CarouselContent>
