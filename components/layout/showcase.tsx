@@ -8,9 +8,9 @@ const ShowcaseSection = () => {
 			<DefaultContainer>
 				<section className="h-[1335px] md:h-[850px] flex flex-col items-center justify-center w-full mx-auto">
 					<div className="flex flex-col items-center justify-center mb-8">
-						<h1 className="text-2xl mt-64 md:-mt-0 md:text-3xl font-semibold text-zinc-900 mb-5">
+						<h2 className="text-2xl mt-64 md:-mt-0 md:text-3xl font-semibold text-zinc-900 mb-5">
 							Showcase
-						</h1>
+						</h2>
 						<p className="max-w-[768px] text-sm md:text-lg text-center text-zinc-800 leading-relaxed">
 							Discover a showcase of our finest projects, each a testament to
 							innovative design and meticulous craftsmanship that transforms

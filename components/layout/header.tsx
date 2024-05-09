@@ -27,20 +27,22 @@ const Header = () => {
 	return (
 		<DefaultContainer className="pb-4">
 			<header className="flex items-center justify-between h-20 w-full">
-				<span className="text-3xl font-semibold">Undertaker</span>
+				<Link href="/">
+					<span className="text-3xl font-semibold">Undertaker</span>
+				</Link>
 				<div>{renderLinks()}</div>
 				<ul className="flex items-center gap-6">
-					<li>
+					<li className="hover:bg-zinc-900 hover:text-zinc-100 transition-all p-2 rounded-full">
 						<Link href="#">
 							<UserIcon />
 						</Link>
 					</li>
-					<li>
+					<li className="hover:bg-zinc-900 hover:text-zinc-100 transition-all p-2 rounded-full">
 						<Link href="#">
 							<HeartIcon />
 						</Link>
 					</li>
-					<li>
+					<li className="hover:bg-zinc-900 hover:text-zinc-100 transition-all p-2 rounded-full">
 						<Link href="#">
 							<SearchIcon />
 						</Link>
