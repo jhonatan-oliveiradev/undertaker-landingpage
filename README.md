@@ -48,6 +48,8 @@ O projeto **Undertaker** é uma SPA Institucional feita com Next.js, Typescript 
 O protótipo do projeto foi feito baseado no arquivo Figma, disponibilizado na [comunidade](https://www.figma.com/community), e ajustado por [mim](https://www.linkedin.com/in/jhonatan-oliveira1693/) afim de aprofundar os estudos nas tecnologias utilizadas para o desenvolvimento da aplicação. 
 Você pode visualizar o protótipo do projeto através deste [link](https://www.figma.com/file/V45ZFfB9xSxUeJ6k5fhzEA/Undertaker---Website-Design-Concept?type=design&node-id=0%3A1&mode=design&t=5XO82emuPBnpkzOO-1).
 
+Você pode visualizar o deploy da aplicação [aqui](https://undertaker-landingpage.vercel.app).
+
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Consulte a [LICENÇA](./LICENSE) para obter mais informações.
